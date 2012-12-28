@@ -114,7 +114,7 @@ function graph_cpu_report ( &$metaInfo ) {
             "double", $time_ranges[$range], $range_count[$range]);
         $metricData["cpu_nice"] = $data["cpu_nice"];
 
-        $data = $chukwa->getMetrics($table, $host, "cpu_system", $start, $end,
+        $data = $chukwa->getMetrics($table, $hostname, "cpu_system", $start, $end,
             "double", $time_ranges[$range], $range_count[$range]);
         $metricData["cpu_system"] = $data["cpu_system"];
 
