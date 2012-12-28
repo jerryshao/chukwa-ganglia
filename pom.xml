@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.apache.hadoop.chukwa.contrib</groupId>
+  <artifactId>chukwa-ganglia</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>chukwa-ganglia</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <chukwa.lib.dir>${basedir}/../../lib</chukwa.lib.dir>
+    <chukwa.compile.lib.dir>${basedir}/../../target</chukwa.compile.lib.dir>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+      <version>4.10</version>
+    </dependency>
+    <dependency>
+    	<groupId>log4j</groupId>
+    	<artifactId>log4j</artifactId>
+    	<version>1.2.16</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.googlecode.json-simple</groupId>
+    	<artifactId>json-simple</artifactId>
+    	<version>1.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hyperic</groupId>
+    	<artifactId>sigar</artifactId>
+    	<version>1.6.4</version>
+    	<scope>system</scope>
+    	<systemPath>${chukwa.lib.dir}/sigar.jar</systemPath>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.hbase</groupId>
+    	<artifactId>hbase</artifactId>
+    	<version>0.94.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.incubator</groupId>
+    	<artifactId>chukwa</artifactId>
+    	<version>0.6.0</version>
+    	<systemPath>${chukwa.compile.lib.dir}/chukwa-0.6.0.jar</systemPath>
+    	<scope>system</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.hadoop</groupId>
+    	<artifactId>hadoop-core</artifactId>
+    	<version>1.0.3</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.incubator</groupId>
+    	<artifactId>chukwa-client</artifactId>
+    	<version>0.6.0</version>
+    	<scope>system</scope>
+    	<systemPath>${chukwa.compile.lib.dir}/chukwa-0.6.0-client.jar</systemPath>
+    </dependency>
+  </dependencies>
+</project>
